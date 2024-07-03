@@ -4,7 +4,8 @@
   "info": {
     "singularName": "employee",
     "pluralName": "employees",
-    "displayName": "employees"
+    "displayName": "employees",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -28,12 +29,12 @@
       "required": true
     },
     "picture": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": true,
-      "required": true
+      ]
     }
   }
 }
