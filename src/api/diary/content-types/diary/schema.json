@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "diaries",
+  "info": {
+    "singularName": "diary",
+    "pluralName": "diaries",
+    "displayName": "diary",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "content": {
+      "type": "richtext",
+      "required": true
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "diaries"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "emotions": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
