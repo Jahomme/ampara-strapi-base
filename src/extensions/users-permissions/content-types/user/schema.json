@@ -81,6 +81,26 @@
       "relation": "oneToMany",
       "target": "api::diary.diary",
       "mappedBy": "users_permissions_user"
+    },
+    "users_permissions_users": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "users"
+    },
+    "users": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "users_permissions_users"
+    },
+    "employees": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::employee.employee"
+    },
+    "observer": {
+      "type": "string"
     }
   }
 }
